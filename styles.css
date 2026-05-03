@@ -49,7 +49,7 @@ padding: 100px 50px;
 /* BLACK BOX WITH BLUE TEXT */
 .box {
 background-color: #000;
-color: #3399ff;
+color: #ffbb55;
 padding: 30px;
 max-width: 800px;
 border-radius: 10px;
@@ -58,5 +58,5 @@ box-shadow: 0 0 15px rgba(0,0,0,0.8);
 
 .box h2 {
 margin-top: 0;
-color: #66ccff;
+color: #ffdd99;
 }
