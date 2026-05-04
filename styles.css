@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   background-color: #111;
   color: #f2d6a2;
 }
@@ -19,9 +19,10 @@ body {
 }
 
 .logo {
+  font-family: 'Cinzel', serif;
   color: #ffdd99;
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
 }
 
 .nav-links a {
@@ -42,7 +43,6 @@ body {
   overflow: hidden;
 }
 
-/* MUCH brighter, more vibrant */
 .hero img {
   width: 100%;
   height: 100%;
@@ -50,56 +50,44 @@ body {
   filter: brightness(1.3) contrast(1.15) saturate(1.25);
 }
 
-/* very light overlay (just for readability, not darkening) */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.0),
-    rgba(0,0,0,0.2)
-  );
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.2));
 }
 
-/* TRUE CENTERED BOTTOM */
+/* HERO TEXT (CENTERED) */
 .hero-text {
   position: absolute;
   bottom: 30px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
-  z-index: 2;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
-}
-
-/* readable panel but not heavy */
-.hero-text > * {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 10px 18px;
-  border-radius: 10px;
-  margin: 5px 0;
-  backdrop-filter: blur(4px);
-}
-
-/* buttons container tweak */
-.hero-buttons {
-  background: transparent;
-  padding: 0;
+  z-index: 5;
 }
 
 .hero-text h3 {
-  color: #ffdd99;
-  font-size: 1.8rem;
-  margin: 0;
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0.65);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 .hero-text p {
-  font-size: 1.1rem;
-  margin: 0;
+  margin-top: 10px;
+  background: rgba(0,0,0,0.6);
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.hero-buttons {
+  margin-top: 15px;
 }
 
 /* BUTTONS */
@@ -130,7 +118,12 @@ body {
   background-color: #1a1208;
 }
 
-/* REST (unchanged) */
+/* HEADINGS (THIS IS THE BIG CHANGE) */
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+}
+
 .intro {
   text-align: center;
   padding: 90px 20px;
@@ -143,7 +136,7 @@ body {
 .cta h2,
 .community h2 {
   color: #ffdd99;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
 }
 
 .split-section {
@@ -173,6 +166,15 @@ body {
   flex: 1;
 }
 
+.split-text h2 {
+  font-size: 2.2rem;
+}
+
+.split-text h3 {
+  color: #ffbb55;
+  font-size: 1.6rem;
+}
+
 .features {
   padding: 90px 8%;
   text-align: center;
@@ -191,6 +193,18 @@ body {
   border: 1px solid #5c3a1a;
   border-radius: 14px;
   padding: 25px;
+}
+
+.small-image-placeholder {
+  height: 150px;
+  background-color: #1a1208;
+  border: 2px dashed #8a5a22;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c89655;
+  margin-bottom: 20px;
 }
 
 .cta {
