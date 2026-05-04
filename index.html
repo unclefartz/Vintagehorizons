@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,30 +6,69 @@
   <title>Vintage Horizons</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
+  <!-- HERO IMAGE -->
   <header class="hero">
     <img src="header.jpg" alt="Vintage Horizons Banner">
     <div class="overlay">
-      
+      <h1>Vintage Horizons</h1>
+      <p>A living, breathing world</p>
     </div>
   </header>
 
+  <!-- MAIN CONTENT -->
   <section class="content">
-    <div class="box">
-      <h2>Join Today!</h2>
-      <p>
-        I'll put some stuff here too lolololol
-      </p>
 
-```
-  <p>
-    And some more stuff here LOOOOOOOOOOOOOOOL
-  </p>
-</div>
-```
+    <!-- LEFT BUTTON MENU -->
+    <div class="side-menu">
+      <button onclick="showContent('about')">About Us</button>
+      <button onclick="showContent('join')">Join The Server</button>
+      <button onclick="showContent('guide')">Server Guide</button>
+      <button onclick="showContent('members')">Members Board</button>
+    </div>
+
+    <!-- MAIN TEXT BOX -->
+    <div class="box" id="mainBox">
+      <h2>About Us</h2>
+      <p>Welcome to Vintage Horizons.</p>
+      <p>A community-driven Vintage Story server focused on exploration, trade, and world-building.</p>
+    </div>
 
   </section>
+
+  <!-- SCRIPT -->
+  <script>
+    const content = {
+      about: `
+        <h2>About Us</h2>
+        <p>Welcome to Vintage Horizons.</p>
+        <p>A community-driven Vintage Story server focused on exploration, trade, and world-building.</p>
+      `,
+      join: `
+        <h2>Join The Server</h2>
+        <p><strong>IP:</strong> your.server.ip</p>
+        <p><strong>Discord:</strong> your.discord.link</p>
+        <p>Download the modpack and jump straight in.</p>
+      `,
+      guide: `
+        <h2>Server Guide</h2>
+        <p>• No griefing</p>
+        <p>• Respect other players</p>
+        <p>• Trade encouraged</p>
+        <p>• Explore and build your own story</p>
+      `,
+      members: `
+        <h2>Members Board</h2>
+        <p>Highlight your top players, towns, or factions here.</p>
+      `
+    };
+
+    function showContent(section) {
+      document.getElementById("mainBox").innerHTML = content[section];
+    }
+  </script>
 
 </body>
 </html>
