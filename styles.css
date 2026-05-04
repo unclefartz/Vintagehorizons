@@ -10,7 +10,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: #0b0805;
+  background-color: rgba(11, 8, 5, 0.85);
+  backdrop-filter: blur(6px);
   border-bottom: 1px solid #7a5126;
   display: flex;
   justify-content: space-between;
@@ -28,6 +29,7 @@ body {
   color: #f2d6a2;
   text-decoration: none;
   margin-left: 25px;
+  transition: 0.2s;
 }
 
 .nav-links a:hover {
@@ -42,49 +44,52 @@ body {
   overflow: hidden;
 }
 
+/* Brighter, cinematic image */
 .hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.45);
+  filter: brightness(1.2) contrast(1.15) saturate(1.2);
 }
 
-/* subtle gradient for readability */
+/* Soft cinematic gradient */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.1),
-    rgba(0,0,0,0.4)
+    rgba(0,0,0,0.05),
+    rgba(0,0,0,0.55)
   );
 }
 
-/* TEXT PANEL */
+/* CENTERED BOTTOM TEXT PANEL */
 .hero-text {
   position: absolute;
-  bottom: 8%;
-  left: 5%;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
-  max-width: 520px;
 
-  background: rgba(0, 0, 0, 0.75);
-  padding: 28px 32px;
+  text-align: center;
+  max-width: 600px;
+
+  background: rgba(0, 0, 0, 0.7);
+  padding: 25px 35px;
   border-radius: 14px;
   border: 1px solid #7a5126;
-  box-shadow: 0 0 25px rgba(0,0,0,0.9);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
 }
 
 .hero-text h3 {
   color: #ffdd99;
   font-size: 1.8rem;
-  margin: 0 0 10px 0;
+  margin: 0 0 10px;
 }
 
 .hero-text p {
-  color: #f2d6a2;
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -97,10 +102,11 @@ body {
 .button {
   display: inline-block;
   padding: 15px 25px;
-  margin-right: 12px;
+  margin: 0 6px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.2s;
 }
 
 .primary {
@@ -121,7 +127,7 @@ body {
   background-color: #1a1208;
 }
 
-/* REST (unchanged layout) */
+/* REST */
 .intro {
   text-align: center;
   padding: 90px 20px;
@@ -173,16 +179,10 @@ body {
 
 .split-text h2 {
   color: #ffdd99;
-  font-size: 2rem;
 }
 
 .split-text h3 {
   color: #ffbb55;
-  font-size: 1.5rem;
-}
-
-.split-text p {
-  line-height: 1.7;
 }
 
 .features {
@@ -203,7 +203,6 @@ body {
   border: 1px solid #5c3a1a;
   border-radius: 14px;
   padding: 25px;
-  text-align: left;
   box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
@@ -217,14 +216,6 @@ body {
   align-items: center;
   color: #c89655;
   margin-bottom: 20px;
-}
-
-.feature-card h3 {
-  color: #ffdd99;
-}
-
-.feature-card p {
-  line-height: 1.6;
 }
 
 .cta {
@@ -254,19 +245,4 @@ body {
   padding: 60px 8%;
   background-color: #050403;
   border-top: 1px solid #7a5126;
-}
-
-.footer h3 {
-  color: #ffdd99;
-}
-
-.footer a {
-  display: block;
-  color: #f2d6a2;
-  text-decoration: none;
-  margin: 8px 0;
-}
-
-.footer a:hover {
-  color: #ffbb55;
 }
