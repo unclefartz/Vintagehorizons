@@ -9,66 +9,138 @@
 
 <body>
 
-  <!-- HERO IMAGE -->
+  <nav class="navbar">
+    <div class="logo">Vintage Horizons</div>
+
+    <div class="nav-links">
+      <a href="#about">Home</a>
+      <a href="#join">Join</a>
+      <a href="#guide">Guide</a>
+      <a href="#community">Community</a>
+    </div>
+  </nav>
+
   <header class="hero">
     <img src="header.jpg" alt="Vintage Horizons Banner">
-    <div class="overlay">
+
+    <div class="hero-text">
       <h1>Vintage Horizons</h1>
-      <p>A living, breathing world</p>
+      <h3>A Vintage Story Server</h3>
+      <p>Explore, build, trade, survive, and become part of a growing world.</p>
+
+      <div class="hero-buttons">
+        <a href="#join" class="button primary">Join Now</a>
+        <a href="#guide" class="button secondary">Server Guide</a>
+      </div>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <section class="content">
-
-    <!-- LEFT BUTTON MENU -->
-    <div class="side-menu">
-      <button onclick="showContent('about')">About Us</button>
-      <button onclick="showContent('join')">Join The Server</button>
-      <button onclick="showContent('guide')">Server Guide</button>
-      <button onclick="showContent('members')">Members Board</button>
-    </div>
-
-    <!-- MAIN TEXT BOX -->
-    <div class="box" id="mainBox">
-      <h2>About Us</h2>
-      <p>Welcome to Vintage Horizons.</p>
-      <p>A community-driven Vintage Story server focused on exploration, trade, and world-building.</p>
-    </div>
-
+  <section id="about" class="intro">
+    <h2>Engage With Our Community</h2>
+    <p>
+      Vintage Horizons is a community-driven Vintage Story server focused on exploration,
+      survival, building, trade, and long-term world progression.
+    </p>
   </section>
 
-  <!-- SCRIPT -->
-  <script>
-    const content = {
-      about: `
-        <h2>About Us</h2>
-        <p>Welcome to Vintage Horizons.</p>
-        <p>A community-driven Vintage Story server focused on exploration, trade, and world-building.</p>
-      `,
-      join: `
-        <h2>Join The Server</h2>
-        <p><strong>IP:</strong> your.server.ip</p>
-        <p><strong>Discord:</strong> your.discord.link</p>
-        <p>Download the modpack and jump straight in.</p>
-      `,
-      guide: `
-        <h2>Server Guide</h2>
-        <p>• No griefing</p>
-        <p>• Respect other players</p>
-        <p>• Trade encouraged</p>
-        <p>• Explore and build your own story</p>
-      `,
-      members: `
-        <h2>Members Board</h2>
-        <p>Highlight your top players, towns, or factions here.</p>
-      `
-    };
+  <section class="split-section">
+    <div class="image-placeholder">Image Placeholder</div>
 
-    function showContent(section) {
-      document.getElementById("mainBox").innerHTML = content[section];
-    }
-  </script>
+    <div class="split-text">
+      <h2>― Built For Adventure</h2>
+      <h3>Explore a living world</h3>
+      <p>
+        Discover towns, ruins, wilderness, player settlements, and trade routes across a world
+        shaped by the community.
+      </p>
+    </div>
+  </section>
+
+  <section class="split-section reverse">
+    <div class="image-placeholder">Image Placeholder</div>
+
+    <div class="split-text">
+      <h2>― Friendly Community</h2>
+      <h3>Build something together</h3>
+      <p>
+        Whether you enjoy solo survival, trading, town building, or helping others, there is a
+        place for you here.
+      </p>
+    </div>
+  </section>
+
+  <section id="guide" class="features">
+    <h2>Server Features</h2>
+    <p class="section-subtitle">
+      A few placeholders for the main things your server offers.
+    </p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="small-image-placeholder">Image</div>
+        <h3>Economy</h3>
+        <p>Trade with players, build shops, and take part in a player-driven market.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="small-image-placeholder">Image</div>
+        <h3>World Map</h3>
+        <p>Find settlements, routes, kingdoms, towns, and important locations.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="small-image-placeholder">Image</div>
+        <h3>Events</h3>
+        <p>Take part in community events, projects, challenges, and group builds.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="small-image-placeholder">Image</div>
+        <h3>Server Guide</h3>
+        <p>Learn rules, claims, mods, joining steps, and useful commands.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="cta">
+    <h2>Ready To Start Your Adventure?</h2>
+    <p>Join the Discord, read the guide, and step into Vintage Horizons.</p>
+    <a href="#" class="button primary">Apply / Join Discord</a>
+  </section>
+
+  <section id="community" class="community">
+    <h2>Our Community</h2>
+
+    <div class="review-box">
+      <p>
+        “Put a player review, welcome message, or community quote here.”
+      </p>
+      <strong>— Player Name</strong>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <h3>Useful Information</h3>
+      <a href="#join">How To Join</a>
+      <a href="#guide">Server Guide</a>
+      <a href="#">Rules</a>
+      <a href="#">Mod List</a>
+    </div>
+
+    <div>
+      <h3>Useful Links</h3>
+      <a href="#">Discord</a>
+      <a href="#">World Map</a>
+      <a href="#">Community Board</a>
+      <a href="#">Support</a>
+    </div>
+
+    <div>
+      <h3>Vintage Horizons</h3>
+      <p>A community Vintage Story server.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
