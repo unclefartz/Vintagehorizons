@@ -10,8 +10,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: rgba(11, 8, 5, 0.85);
-  backdrop-filter: blur(6px);
+  background-color: rgba(11, 8, 5, 0.9);
   border-bottom: 1px solid #7a5126;
   display: flex;
   justify-content: space-between;
@@ -29,7 +28,6 @@ body {
   color: #f2d6a2;
   text-decoration: none;
   margin-left: 25px;
-  transition: 0.2s;
 }
 
 .nav-links a:hover {
@@ -44,69 +42,74 @@ body {
   overflow: hidden;
 }
 
-/* Brighter, cinematic image */
+/* MUCH brighter, more vibrant */
 .hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(2) contrast(2) saturate(2);
+  filter: brightness(1.3) contrast(1.15) saturate(1.25);
 }
 
-/* Soft cinematic gradient */
+/* very light overlay (just for readability, not darkening) */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.20),
-    rgba(0,0,0,1.2)
+    rgba(0,0,0,0.0),
+    rgba(0,0,0,0.2)
   );
 }
 
-/* CENTERED BOTTOM TEXT PANEL */
+/* TRUE CENTERED BOTTOM */
 .hero-text {
   position: absolute;
-  bottom: 6%;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 30px;
+  left: 0;
+  width: 100%;
   z-index: 2;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  max-width: 600px;
+}
 
-  background: rgba(0, 0, 0, 0.7);
-  padding: 25px 35px;
-  border-radius: 14px;
-  border: 1px solid #7a5126;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+/* readable panel but not heavy */
+.hero-text > * {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 18px;
+  border-radius: 10px;
+  margin: 5px 0;
+  backdrop-filter: blur(4px);
+}
+
+/* buttons container tweak */
+.hero-buttons {
+  background: transparent;
+  padding: 0;
 }
 
 .hero-text h3 {
   color: #ffdd99;
   font-size: 1.8rem;
-  margin: 0 0 10px;
+  margin: 0;
 }
 
 .hero-text p {
   font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.hero-buttons {
-  margin-top: 20px;
+  margin: 0;
 }
 
 /* BUTTONS */
 .button {
   display: inline-block;
-  padding: 15px 25px;
+  padding: 14px 24px;
   margin: 0 6px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.2s;
 }
 
 .primary {
@@ -127,7 +130,7 @@ body {
   background-color: #1a1208;
 }
 
-/* REST */
+/* REST (unchanged) */
 .intro {
   text-align: center;
   padding: 90px 20px;
@@ -141,13 +144,6 @@ body {
 .community h2 {
   color: #ffdd99;
   font-size: 2.4rem;
-}
-
-.intro p,
-.section-subtitle,
-.cta p {
-  font-size: 1.1rem;
-  line-height: 1.7;
 }
 
 .split-section {
@@ -177,14 +173,6 @@ body {
   flex: 1;
 }
 
-.split-text h2 {
-  color: #ffdd99;
-}
-
-.split-text h3 {
-  color: #ffbb55;
-}
-
 .features {
   padding: 90px 8%;
   text-align: center;
@@ -203,19 +191,6 @@ body {
   border: 1px solid #5c3a1a;
   border-radius: 14px;
   padding: 25px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.6);
-}
-
-.small-image-placeholder {
-  height: 150px;
-  background-color: #1a1208;
-  border: 2px dashed #8a5a22;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #c89655;
-  margin-bottom: 20px;
 }
 
 .cta {
@@ -244,5 +219,4 @@ body {
   gap: 50px;
   padding: 60px 8%;
   background-color: #050403;
-  border-top: 1px solid #7a5126;
 }
