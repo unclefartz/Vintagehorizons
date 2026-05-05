@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vintage Horizons</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,7 +15,8 @@
     <div class="logo">Vintage Horizons</div>
 
     <div class="nav-links">
-      <a href="map.html" class="map-button">Map</a>
+      <a href="marketplace.html" class="main-nav-button">Marketplace Index</a>
+      <a href="map.html" class="main-nav-button">Map</a>
 
       <div class="menu-dropdown">
         <button class="menu-button" type="button">Menu ▾</button>
@@ -24,6 +26,7 @@
           <a href="#join">Join Us</a>
           <a href="#guide">Guides</a>
           <a href="#community">Community</a>
+          <a href="marketplace.html">Marketplace Index</a>
           <a href="map.html">Map</a>
         </div>
       </div>
@@ -153,22 +156,28 @@
   </footer>
 
   <script>
-    const menu = document.querySelector('.menu-dropdown');
-    const button = document.querySelector('.menu-button');
+    document.addEventListener("DOMContentLoaded", () => {
+      const menu = document.querySelector(".menu-dropdown");
+      const button = document.querySelector(".menu-button");
 
-    button.addEventListener('click', (event) => {
-      event.stopPropagation();
-      menu.classList.toggle('active');
-    });
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        menu.classList.toggle("active");
+      });
 
-    document.addEventListener('click', () => {
-      menu.classList.remove('active');
-    });
+      menu.addEventListener("click", (event) => {
+        event.stopPropagation();
+      });
 
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        menu.classList.remove('active');
-      }
+      document.addEventListener("click", () => {
+        menu.classList.remove("active");
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          menu.classList.remove("active");
+        }
+      });
     });
   </script>
 
