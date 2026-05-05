@@ -11,23 +11,23 @@
 <body>
 
   <nav class="navbar">
-  <div class="logo">Vintage Horizons</div>
+    <div class="logo">Vintage Horizons</div>
 
-  <div class="nav-links">
-    <a href="map.html" class="map-button">Map</a>
+    <div class="nav-links">
+      <a href="map.html" class="map-button">Map</a>
 
-    <div class="menu-dropdown">
-      <button class="menu-button">Menu ▾</button>
+      <div class="menu-dropdown">
+        <button class="menu-button" type="button">Menu ▾</button>
 
-      <div class="dropdown-content">
-        <a href="#about">Home</a>
-        <a href="#join">Join Us</a>
-        <a href="#guide">Guides</a>
-        <a href="#community">Community</a>
-        <a href="map.html">Map</a>
+        <div class="dropdown-content">
+          <a href="#about">Home</a>
+          <a href="#join">Join Us</a>
+          <a href="#guide">Guides</a>
+          <a href="#community">Community</a>
+          <a href="map.html">Map</a>
+        </div>
       </div>
     </div>
-  </div>
   </nav>
 
   <header class="hero">
@@ -151,6 +151,26 @@
       <p>A community Vintage Story server.</p>
     </div>
   </footer>
+
+  <script>
+    const menu = document.querySelector('.menu-dropdown');
+    const button = document.querySelector('.menu-button');
+
+    button.addEventListener('click', (event) => {
+      event.stopPropagation();
+      menu.classList.toggle('active');
+    });
+
+    document.addEventListener('click', () => {
+      menu.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        menu.classList.remove('active');
+      }
+    });
+  </script>
 
 </body>
 </html>
