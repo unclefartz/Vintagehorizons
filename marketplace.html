@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vintage Horizons Marketplace</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Vintage Horizons</div>
+
+    <div class="nav-links">
+      <a href="marketplace.html" class="main-nav-button">Marketplace Index</a>
+      <a href="map.html" class="main-nav-button">Map</a>
+
+      <div class="menu-dropdown">
+        <button class="menu-button" type="button">Menu ▾</button>
+
+        <div class="dropdown-content">
+          <a href="index.html#about">Home</a>
+          <a href="index.html#join">Join Us</a>
+          <a href="index.html#guide">Guides</a>
+          <a href="index.html#community">Community</a>
+          <a href="marketplace.html">Marketplace Index</a>
+          <a href="map.html">Map</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="market-page">
+    <section class="market-card">
+      <div class="market-icon">✦</div>
+
+      <h1>Market Place Index</h1>
+
+      <p>
+        There are no player stores yet. However you can find the shop plot numbers and Featured stock here in the future
+      </p>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menu = document.querySelector(".menu-dropdown");
+      const button = document.querySelector(".menu-button");
+
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        menu.classList.toggle("active");
+      });
+
+      menu.addEventListener("click", (event) => {
+        event.stopPropagation();
+      });
+
+      document.addEventListener("click", () => {
+        menu.classList.remove("active");
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          menu.classList.remove("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
